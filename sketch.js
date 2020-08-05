@@ -12,7 +12,7 @@ function preload()
 }
 
 function setup() {
-	createCanvas(800, 650);
+	createCanvas(800, 750);
 	rectMode(CENTER);
 	
 
