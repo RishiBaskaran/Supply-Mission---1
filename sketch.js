@@ -57,9 +57,7 @@ function draw() {
 function keyPressed() {
  if (keyCode === DOWN_ARROW) {
     // Look at the hints in the document and understand how to make the package body fall only on
-	 ellipseMode(RADIUS);
-    ellipse(package.position.x,package.position.y,20,20);
-    rect(ground.position.x,ground.position.y,400,20);
+
      }
 }
 
