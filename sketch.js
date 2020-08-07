@@ -20,7 +20,7 @@ function setup() {
 	packageSprite.addImage(packageIMG)
 	packageSprite.scale=0.2
 
-	helicopterSprite=createSprite(width/2, 160, 10,10);
+	helicopterSprite=createSprite(width/2, 200, 10,10);
 	helicopterSprite.addImage(helicopterIMG)
 	helicopterSprite.scale=0.6
 
@@ -31,7 +31,7 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:3, isStatic:true});
+	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:0.4, isStatic:true});
 	World.add(world, packageBody);
 	
 
@@ -51,16 +51,13 @@ function draw() {
   packageSprite.x= packageBody.position.x 
   packageSprite.y= packageBody.position.y 
   drawSprites();
- keyPressed();
+ 
 }
 
 function keyPressed() {
  if (keyCode === DOWN_ARROW) {
     // Look at the hints in the document and understand how to make the package body fall only on
-Matter.Body.setStatic(package,false)
+Matter.Body.setStatic(packageBody,false)
 	 
      }
 }
-
-
-
